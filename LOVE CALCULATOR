@@ -10,15 +10,18 @@ b=name_l.count('r')
 c=name_l.count('u')
 d=name_l.count('e')
 first=str(a+b+c+d)
-print(first)
+
 #counting for love
 e=name_l.count('l')
 f=name_l.count('o')
 g=name_l.count('v')
 h=name_l.count('e')
 second=str(e+f+g+h)
-print(second)
+
 full=int((first + second ))
+
+if(full>100):
+    full=int(first) +int(second)
 print(f"The love❣ between {name_1} & {name_2} is {full} %" )
 
 if(full>90):
