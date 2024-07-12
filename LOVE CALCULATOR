@@ -1,0 +1,45 @@
+# Love Calculator
+name_1=input("Enter your name : ");
+name_2=input("Enter his/her name :");
+name=(name_1 + name_2)
+
+name_l=name.lower()
+#counting for true
+a=name_l.count('t')
+b=name_l.count('r')
+c=name_l.count('u')
+d=name_l.count('e')
+first=str(a+b+c+d)
+print(first)
+#counting for love
+e=name_l.count('l')
+f=name_l.count('o')
+g=name_l.count('v')
+h=name_l.count('e')
+second=str(e+f+g+h)
+print(second)
+full=int((first + second ))
+print(f"The love❣ between {name_1} & {name_2} is {full} %" )
+
+if(full>90):
+    print("You are sharing an amazing bond , never leave each other ❤❤❤")
+elif(full<=90 and full>80):
+    print("your bond is great💝💝💝")
+elif(full<=80 and full>70):
+    print("your bond is good💗💗💗")
+elif(full<=70 and full>60):
+    print("your bond is perfect💓💓💓")
+elif(full<=60 and full>50):
+    print("your bond is ok💙💙💙")
+elif(full<=50 and full>40):
+    print("your bond is average💛💛💛")
+elif(full<=40 and full>30):
+    print("your bond is bad❤‍🩹❤‍🩹❤‍🩹")
+elif(full<=30 and full>20):
+    print("your bond is worse❤‍🔥❤‍🔥❤‍🔥")
+elif(full<=20 and full>10):
+    print("your bond is worst❤‍🔥❤‍🩹❤‍🔥")
+elif(full<=10 and full>0):
+    print("Don't go for it 💔💔💔")
+else:
+    print("you are not good for each other  😀")
