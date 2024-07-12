@@ -1,0 +1,39 @@
+#pizza order
+pizza= input("Which pizza do you want to take (s/m/l) :")
+if(pizza=='s'):
+    bill=100
+    print("Price=100 rs .")
+elif(pizza=='m'):
+    bill=200
+    print("Price=200 rs .")    
+elif(pizza=='l'):
+    bill=300
+    print("Price=300 rs .") 
+else:
+    print("You entered wrong character :")         
+    exit()  
+
+press_1=input("If you want to take pepproni enter <y> or <Y> :")    
+if (press_1== 'y' or press_1=='Y'):
+    if(pizza=='s'):
+        extra=30
+        print("Pepproni price =30 rs . ")
+    else :
+        extra=50    
+        print("Pepproni price =50 rs . ")
+else :
+    extra=0      
+    print("I don't want pepproni :")  
+
+press_2=input("If you want to take extra cheese enter <z> or <Z> :")    
+if (press_2== 'z' or press_2=='Z'):
+    
+    cheese_extra=20
+    print("Extra cheese price =20 rs . ")
+    
+else :
+    cheese_extra=0      
+    print("I don't want extra  cheese :") 
+
+Total_bill= bill+ extra + cheese_extra
+print("Total bill =",Total_bill)
