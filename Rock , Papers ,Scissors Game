@@ -1,0 +1,46 @@
+#Rock , Papers, Scissors Game
+
+
+import random
+def rock_paper_scissors():
+    """ Function to play Rock, Paper, Scissors game """
+
+    print("Welcome to Rock, Paper, Scissors Game!")
+    print("Rules:")
+    print("Rock wins against scissors")
+    print("Scissors win against paper")
+    print("Paper wins against rock\n")
+    while True:
+        print("Choose:")
+        print("0 - Rock")
+        print("1 - Paper")
+        print("2 - Scissors")
+
+        user_choice=int(input("Choose what you want (0/1/2) :"))
+        comp_choice=random.randint(0,2)
+        print(comp_choice)
+
+        if(user_choice<0 or user_choice>2):
+            print("<Invalid choice>")
+        elif(user_choice==comp_choice):
+            print("< MATCH IS DRAW BETWEEN YOU AND COMPUTER >")
+        elif((comp_choice>user_choice) or (comp_choice==0 and user_choice==2 )):
+            print("<USER LOSE>")
+        elif((comp_choice<user_choice) or (comp_choice==2 and user_choice==1)):
+            print("<USER WIN>")  
+        else:
+            print("Sorry ! , The game is not working properly : ")  
+
+        replay = input("Do you want to play again? (Y/N): ")
+        if replay.upper() != 'Y':
+            break
+    
+
+print("Thank you for playing Rock, Paper, Scissors!")
+
+# Call the function to start the game
+rock_paper_scissors()     
+
+
+
+
