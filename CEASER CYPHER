@@ -1,0 +1,75 @@
+print("Welcome to Ceaser Cypher ")
+list=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+end_point=False
+loc=-1
+list_blank=[]
+while not end_point:
+    press= input("Type 'encrypt' for encryption , type 'decrypt ' for decryption ")
+    if press=='encrypt':
+        message=input("Type your message").upper()
+        shift=int(input("Type the shift number"))
+        for j in message :
+           
+           for k in range(0,26):
+               if j in list :
+                   
+                   if  list[k]==j:
+                       x=k
+                       e=(x+shift)%26
+                   
+                       encrypted_code=list[e]
+                   
+                       list_blank+=encrypted_code
+               else:
+                   index=message.index(j)
+                   list_blank+=j
+                   break
+                   
+                   
+                       
+        
+        code=" "
+        for char in list_blank:
+            code+=char
+        list_blank=" "  
+        print("Here is the encrypted_code result :="+str(code))
+        type=input("Type yes if you want to go again otherwise type no ") 
+        if type== 'yes':
+            end_point=False
+        
+        else :
+            end_point=True  
+            print("Good Bye !")   
+    else :
+        message=input("Type your message").upper()
+        shift=int(input("Type the shift number"))
+        for j in message :
+           
+           for k in range(0,26):
+               if j in list:
+               
+                   if  list[k]==j:
+                       x=k
+                       d=(x-shift)%26
+                   
+                       decrypted_code=list[d]
+                   
+                       list_blank+=decrypted_code
+               else :     
+                   index=message.index(j)
+                   list_blank+=j
+                   break
+        
+        code=" "
+        for char in list_blank:
+            code+=char
+        list_blank=" "   
+        
+        code_new=code.lower()
+        print("Here is the decrypted_code result :="+str(code_new))
+        type=input("Type yes if you want to go again otherwise type no ") 
+        if type== 'yes':
+            end_point=False
+        else :
+            end_point=True  
+            print("Good Bye !")
