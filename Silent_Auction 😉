@@ -1,0 +1,29 @@
+import os
+print("Welcome to the silent auction program ")
+end_of_bidding= False
+bidder_details={}
+heighest_bid=0
+
+while not end_of_bidding :
+    
+    bidder_name=input("Enter the bidder name :")
+    bid_price = int (input(" Enter the bid price :"))
+    bidder_details[bidder_name]=bid_price
+    
+    more_bidders = input("Type no for exit else yes  ").lower()
+    
+    if more_bidders== 'no' :
+        print(bidder_details)
+        for bidder in bidder_details:
+            if bidder_details[bidder] > heighest_bid:
+                end_of_bidding=True 
+                heighest_bid= bidder_details[bidder]
+                heighest_bidder=bidder
+        print("Highest_bid =" +str(heighest_bid) )
+        print("Bidder name ="+ heighest_bidder)
+    elif more_bidders== 'yes':
+        pass 
+        os.system('cls')   
+    else :
+        print("you have entered a wrong character")
+        end_of_bidding= False
