@@ -1,0 +1,79 @@
+year=int(input("enter a year "))
+def checking_leap_year(year):
+    if year%4==0:
+        if year%100==0:
+            if year %400==0:
+                print("It's a leap year ")
+                return "leap"
+            else:
+                print("It's not a leap year ")
+                return "not leap " 
+        else :
+            print("It's definitely a leap year ") 
+            return "leap"  
+    else :
+        print("It's not a leap year ")
+        return "not leap"
+leap_or_not=checking_leap_year(year)        
+month=int(input("enter the month no. in which you want to check the no. of days : "))
+list=[""" 
+January: 31 days 
+""","""
+February: 28 days 
+""","""
+March: 31 days 
+""","""
+April: 30 days 
+""","""
+May: 31 days 
+""","""
+
+June: 30 days 
+""","""
+July: 31 days 
+""","""
+August: 31 days 
+""","""
+September: 30 days 
+""","""
+October: 31 days 
+""","""
+November: 30 days 
+""","""
+December: 31 days 
+"""]
+    
+def checking_days(month):
+    
+        if month==1:
+            return list[0]
+        elif month==2:
+            if leap_or_not=="leap":
+                return 29
+            else :
+                return list[1]
+        elif month==3:
+            return list[2]
+        elif month==4:
+            return list[3]
+        elif month==5:
+            return list[4]
+        elif month==6:
+            return list[5]
+        elif month==7:
+            return list[6]
+        elif month==8:
+            return list[7] 
+        elif month==9:
+            return list[8]
+        elif month==10:
+            return list[9]
+        elif month==11:
+            return list[10]
+        elif month==12:
+            return list[11]   
+        else:
+            print("you have entered a wrong month_no")    
+                 
+no_of_days=checking_days(month) 
+print(no_of_days)
