@@ -8,8 +8,8 @@ logo = """
                                           |___/                      
 """                                          
 print(logo)
-print("let me think of anumber between 1 to 50:")
-number=random.randint(1,51)
+print("let me think of anumber between 1 to 100:")
+number=random.randint(1,101)
 
 difficulty_level=input("Choose level of difficulty low or high:")
 end_of_choosing=False
