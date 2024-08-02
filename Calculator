@@ -1,0 +1,55 @@
+import os 
+
+logo="""
+  ____      _            _       _              
+  / ___|__ _| | ___ _   _| | __ _| |_ ___  _ __  
+ | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__| 
+ | |__| (_| | | (__| |_| | | (_| | || (_) | |    
+  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|    
+                                                 
+"""
+
+print(logo)
+
+print("Welcome to python Calculator")
+first_digit=float(input("Enter the first digit :"))
+end_of_calculation=False
+def calculator():
+    while not end_of_calculation:
+        
+        print("' + '\n' - '\n' * '\n' ÷ '")
+        operation=input("Pick an operation from the above list :")
+        second_digit=float(input("Enter the second digit :"))
+        if operation=='+':
+            result=first_digit+second_digit 
+            return result
+        elif operation=='-':
+            result=first_digit-second_digit
+            return result
+        elif operation=='*':
+            result=first_digit*second_digit
+            return result
+        elif operation=='÷':
+            result=(first_digit/second_digit)
+            return result
+        else:
+            print("You have picked a wrong operation")
+result1=calculator()
+print(result1) 
+while not end_of_calculation:
+    press=input(f"Enter <y> for start a calculation again or press <n> for exit from calculation :").lower()  
+    if press=='y':
+        press1=input(f"Enter <y> for start a calculation with {result1} or press <n> for start a new calculation").lower()
+        if press1=='y':
+            first_digit=result1
+            os.system("cls")
+            result1=calculator()
+            print(result1)
+        
+        else:
+            os.system("cls")
+            first_digit=float(input("Enter the first digit :"))
+            result1=calculator()
+            print(result1)
+    else :
+        exit()
